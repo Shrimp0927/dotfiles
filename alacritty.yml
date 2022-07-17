@@ -19,6 +19,11 @@ window:
 
   dynamic_padding: false
 
+colors:
+  primary:
+    background: '#ffffff'
+    foreground: '#000000'
+
   # decorations: none
 
 scrolling:
