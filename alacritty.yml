@@ -32,18 +32,18 @@ scrolling:
 
 font:
   normal:
-    family: SauceCodePro NF
-    style: Regular
+    family: Monofur NF
+      #style: Regular
 
   bold:
-    family: SauceCodePro NF
-    style: Bold
+    family: Monofurbold NF
+      #style: Bold
 
   italic:
-    family: SauceCodePro NF
-    style: Bold Italic
+    family: Monofuritalic NF
+      #style: Bold Italic
 
-  size: 13.0
+  size: 15.0
 
   offset:
     x: 0
