@@ -26,6 +26,9 @@ return require('packer').startup(function()
   use ({
     "catppuccin/nvim",
     as = "catppuccin",
-    run = "CatppuccinCompile",
   })
+  use {
+    "williamboman/nvim-lsp-installer",
+    "neovim/nvim-lspconfig",
+  }
 end)

@@ -24,6 +24,17 @@ require('telescope').setup({
   }
 })
 
+require("nvim-lsp-installer").setup({
+  automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
+  ui = {
+    icons = {
+      server_installed = "✓",
+      server_pending = "➜",
+      server_uninstalled = "✗"
+    }
+  }
+})
+
 vim.g.catppuccin_flavour = "latte" -- latte, frappe, macchiato, mocha
 vim.cmd[[colorscheme catppuccin]]
 
