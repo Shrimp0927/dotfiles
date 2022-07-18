@@ -36,6 +36,13 @@ function map(mode, lhs, rhs, opts)
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+-- Pane navigation
+map("n", "<C-h>", "<C-w><C-h>")
+map("n", "<C-j>", "<C-w><C-j>")
+map("n", "<C-k>", "<C-w><C-k>")
+map("n", "<C-l>", "<C-w><C-l>")
+
+-- Plugins bindings
 map("n", "<leader>p", ":Telescope find_files hidden=true<CR>")
 map("n", "<leader>f", ":Telescope live_grep<CR>")
 map("n", "<leader>s", ":Telescope grep_string<CR>")
