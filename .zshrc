@@ -12,7 +12,7 @@ git_prompt() {
 
 # Prompt
 setopt PROMPT_SUBST
-export PS1=$'%{\x1b[38;2;254;100;11m%}%c%{\x1b[0m%}$(git_prompt) %{\x1b[38;2;30;102;245m%}\U2192%{\x1b[0m%} '
+export PS1=$'%{\x1b[38;2;210;15;57m%}%c%{\x1b[0m%}$(git_prompt) %{\x1b[38;2;30;102;245m%}\U2192%{\x1b[0m%} '
 
 # Custom Paths
 NVM_PATH=$HOME/.nvm
