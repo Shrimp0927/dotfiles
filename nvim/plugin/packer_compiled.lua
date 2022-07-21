@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "/Users/shrimp/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/shrimp/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/Users/shrimp/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
