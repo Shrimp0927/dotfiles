@@ -55,6 +55,11 @@ map("n", "<C-j>", "<C-w><C-j>")
 map("n", "<C-k>", "<C-w><C-k>")
 map("n", "<C-l>", "<C-w><C-l>")
 
+-- Copy/Paste
+map("v", "<leader>c", '"*yy<CR>')
+map("v", "<leader>v", '"+p<CR>')
+map("n", "<leader>v", '"+p<CR>')
+
 -- Plugins bindings
 map("n", "<leader>p", ":Telescope find_files hidden=true<CR>")
 map("n", "<leader>f", ":Telescope live_grep<CR>")
