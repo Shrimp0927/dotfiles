@@ -40,6 +40,8 @@ require('lualine').setup()
 vim.g.catppuccin_flavour = "latte" -- latte, frappe, macchiato, mocha
 vim.cmd[[colorscheme catppuccin]]
 
+vim.g.diagnostics_enabled = true
+
 -- Map custom keybindings
 function map(mode, lhs, rhs, opts)
     local options = { noremap = true }
