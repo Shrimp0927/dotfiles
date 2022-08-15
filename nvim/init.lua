@@ -37,6 +37,10 @@ require("nvim-lsp-installer").setup({
 
 require('lualine').setup()
 
+require('gitsigns').setup({
+   current_line_blame = true,
+})
+
 vim.g.catppuccin_flavour = "latte" -- latte, frappe, macchiato, mocha
 vim.cmd[[colorscheme catppuccin]]
 
@@ -69,3 +73,10 @@ map("n", "<leader>s", ":Telescope grep_string<CR>")
 map("n", "<leader>b", ":Telescope buffers<CR>")
 map("n", "<leader>h", ":Telescope help_tags<CR>")
 map("n", "<leader>e", ":NvimTreeToggle <CR>")
+
+vim.api.nvim_create_autocmd("FileType", {
+   pattern = "javascript",
+   callback = function()
+	vim.cmd [[ setlocal sw=2 ts=2 sts=2 ]]
+   end
+})

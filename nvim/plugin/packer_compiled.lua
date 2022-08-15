@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "/Users/shrimp/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/Users/shrimp/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/shrimp/.local/share/nvim/site/pack/packer/start/lualine.nvim",
