@@ -39,4 +39,8 @@ return require('packer').startup(function()
     'lewis6991/gitsigns.nvim',
     tag = 'release' -- To use the latest release
   }
+  use {
+	'romgrk/barbar.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 end)
