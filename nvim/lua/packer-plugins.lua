@@ -1,13 +1,11 @@
 return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-
   -- ColorScheme
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
-
   -- NvimTree
   use {
     'kyazdani42/nvim-tree.lua',
@@ -16,7 +14,6 @@ return require('packer').startup(function()
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
-
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -40,11 +37,11 @@ return require('packer').startup(function()
     tag = 'release' -- To use the latest release
   }
   use {
-	'romgrk/barbar.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    'romgrk/barbar.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   use {
-      "akinsho/toggleterm.nvim", 
-      tag = 'v2.*'
+   "akinsho/toggleterm.nvim", 
+    tag = 'v2.*'
   }
 end)
