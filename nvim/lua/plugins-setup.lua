@@ -180,7 +180,7 @@ require("toggleterm").setup({
   }
 })
 
-vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
-vim.cmd[[colorscheme catppuccin]]
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
 
 vim.g.diagnostics_enabled = true

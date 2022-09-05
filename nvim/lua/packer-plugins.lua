@@ -20,10 +20,7 @@ return require('packer').startup(function()
     -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use ({
-    "catppuccin/nvim",
-    as = "catppuccin",
-  })
+  use "ellisonleao/gruvbox.nvim"
   use {
     "williamboman/nvim-lsp-installer",
     "neovim/nvim-lspconfig",
