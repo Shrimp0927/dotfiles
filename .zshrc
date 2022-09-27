@@ -18,12 +18,12 @@ git_prompt() {
   if (( ${#branch} > ${#branch_truncated} )); then
     branch="${branch_truncated}_"
   fi
-  [ -n "${branch}" ] && echo "%{\x1b[38;2;146;131;116m%}::%{\x1b[0m%}%{\x1b[38;2;184;187;38m%}${branch}%{\x1b[0m%}"
+  [ -n "${branch}" ] && echo "%{\x1b[38;2;192;202;245m%}::%{\x1b[0m%}%{\x1b[38;2;158;206;106m%}${branch}%{\x1b[0m%}"
 }
 
 # Prompt
 setopt PROMPT_SUBST
-export PS1=$'%{\x1b[38;2;251;73;52m%}%c%{\x1b[0m%}$(git_prompt) %{\x1b[38;2;131;165;152m%}\U2192%{\x1b[0m%} '
+export PS1=$'%{\x1b[38;2;247;118;142m%}%c%{\x1b[0m%}$(git_prompt) %{\x1b[38;2;125;207;255m%}\U2192%{\x1b[0m%} '
 
 # Custom Paths
 NVM_PATH=$HOME/.nvm
