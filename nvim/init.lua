@@ -33,7 +33,35 @@ map("n", "<leader>N", ":BufferPrevious<CR>")
 map("n", "<leader>q", ":BufferClose<CR>")
 
 vim.api.nvim_create_autocmd("FileType", {
+  pattern = "go",
+  callback = function()
+    vim.cmd [[ setlocal sw=4 ts=4 sts=4 ]]
+  end
+})
+
+vim.api.nvim_create_autocmd("FileType", {
   pattern = "javascript",
+  callback = function()
+    vim.cmd [[ setlocal sw=2 ts=2 sts=2 ]]
+  end
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "typescriptreact",
+  callback = function()
+    vim.cmd [[ setlocal sw=2 ts=2 sts=2 ]]
+  end
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "typescript",
+  callback = function()
+    vim.cmd [[ setlocal sw=2 ts=2 sts=2 ]]
+  end
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "svelte",
   callback = function()
     vim.cmd [[ setlocal sw=2 ts=2 sts=2 ]]
   end

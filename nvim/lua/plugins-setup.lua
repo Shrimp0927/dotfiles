@@ -13,7 +13,7 @@ require('nvim-treesitter.configs').setup({
 }) 
 
 local nvim_tree_events = require("nvim-tree.events")
-local bufferline_state = require("bufferline.state")
+local bufferline_state = require("bufferline.api")
 
 require('nvim-tree').setup({
   auto_reload_on_write = true,

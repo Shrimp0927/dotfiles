@@ -33,7 +33,7 @@ RVM_PATH=$HOME/.rvm
 [[ -d $NVM_PATH ]] && [[ -f $NVM_PATH/nvm.sh ]] && \. $NVM_PATH/nvm.sh
 
 # Paths
-export PATH="$HOME/.rvm/bin:$PATH:/Applications/Postgres.app/Contents/Versions/14/bin:/Applications/Alacritty.app/Contents/MacOS"
+export PATH="$HOME/.rvm/bin:$PATH:/Applications/Postgres.app/Contents/Versions/14/bin:/Applications/Alacritty.app/Contents/MacOS:/usr/local/bin:$PATH"
 
 # Aliases
 alias vi="nvim"
@@ -41,3 +41,4 @@ alias so="source $HOME/.zshrc"
 alias dots="cd $HOME/dotfiles/"
 alias h="cd $HOME"
 alias b="cd .."
+alias python="python3"
