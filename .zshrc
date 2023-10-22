@@ -1,15 +1,3 @@
-# Tmux lmao
-exec_tmux() {
-  which tmux &> /dev/null && \
-    [ -n "$PS1" ] && \
-    [[ ! "$TERM" =~ screen ]] && \
-    [[ ! "$TERM" =~ tmux ]] && \
-    [ -z "$TMUX" ] && \
-    exec tmux
-}
-
-exec_tmux
-
 # Utils
 git_prompt() {
   local branch="$(git symbolic-ref HEAD 2> /dev/null | cut -d'/' -f3)"
