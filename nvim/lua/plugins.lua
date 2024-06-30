@@ -158,6 +158,9 @@ local plugins = {
     "chentoast/marks.nvim",
     config = get_setup("marks"),
   },
+
+  -- Github Copilot
+  { "github/copilot.vim" }
 }
 
 local opts = {}

@@ -13,15 +13,8 @@ git_prompt() {
 setopt PROMPT_SUBST
 export PS1=$'%{\x1b[38;2;247;118;142m%}%c%{\x1b[0m%}$(git_prompt) %{\x1b[38;2;125;207;255m%}\U2192%{\x1b[0m%} '
 
-# Custom Paths
-NVM_PATH=$HOME/.nvm
-RVM_PATH=$HOME/.rvm
-
-# Init NVM 
-[[ -d $NVM_PATH ]] && [[ -f $NVM_PATH/nvm.sh ]] && \. $NVM_PATH/nvm.sh
-
-# Paths
-export PATH="$HOME/.rvm/bin:$PATH:/Applications/Postgres.app/Contents/Versions/14/bin:/Applications/Alacritty.app/Contents/MacOS:/usr/local/bin:$PATH"
+# Path
+export PATH="$PATH:/usr/local/gcc_arm/arm-gnu-toolchain-12.2.mpacbti-rel1-darwin-x86_64-arm-none-eabi/bin"
 
 # Aliases
 alias vi="nvim"
@@ -30,3 +23,5 @@ alias dots="cd $HOME/dotfiles/"
 alias h="cd $HOME"
 alias b="cd .."
 alias python="python3"
+alias pip="pip3"
+alias erd="erd --level 1 --hidden --no-ignore --long --group"
