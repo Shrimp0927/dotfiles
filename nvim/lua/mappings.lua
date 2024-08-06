@@ -1,6 +1,3 @@
--- Vanilla nvim mappings.. mapping specific to plugins
--- found in setup folders for each respective plugin.
-
 local mode = require("consts").modes
 
 vim.g.mapleader = " "
@@ -10,9 +7,6 @@ vim.keymap.set(mode.normal, "<C-j>", "<C-w><C-j>", { noremap = true })
 vim.keymap.set(mode.normal, "<C-k>", "<C-w><C-k>", { noremap = true })
 vim.keymap.set(mode.normal, "<C-l>", "<C-w><C-l>", { noremap = true })
 vim.keymap.set(mode.normal, "<C-h>", "<C-w><C-h>", { noremap = true })
-
--- Equalize pane widths
-vim.keymap.set(mode.normal, "<leader>=", "<C-W><C-=>", { noremap = true })
 
 -- copy/paste
 vim.keymap.set(mode.visual_select, '<leader>c', '"*yy<CR>', { noremap = true })
@@ -24,8 +18,6 @@ vim.keymap.set(mode.normal, "=", ":lua update_buf_width(2)<CR>", { noremap = tru
 vim.keymap.set(mode.normal, "-", ":lua update_buf_width(-2)<CR>", { noremap = true })
 vim.keymap.set(mode.normal, "+", ":lua update_buf_height(2)<CR>", { noremap = true })
 vim.keymap.set(mode.normal, "_", ":lua update_buf_height(-2)<CR>", { noremap = true })
-vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', { expr = true, replace_keycodes = false })
-vim.g.copilot_no_tab_map = true
 
 -- Terminal buffer-scoped maps
 function _G.set_terminal_keymaps()
