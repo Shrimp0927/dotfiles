@@ -1,0 +1,65 @@
+local mode = require("consts").modes
+
+require("mason").setup()
+
+local lspconfig = require("lspconfig")
+
+lspconfig["bashls"].setup({})
+lspconfig["clangd"].setup({})
+lspconfig["cssls"].setup({})
+lspconfig["docker_compose_language_service"].setup({})
+lspconfig["dockerls"].setup({})
+lspconfig["eslint"].setup({})
+lspconfig["html"].setup({})
+lspconfig["lemminx"].setup({})
+lspconfig["lua_ls"].setup({})
+lspconfig["marksman"].setup({})
+lspconfig["pyright"].setup({})
+lspconfig["solargraph"].setup({})
+lspconfig["tailwindcss"].setup({})
+lspconfig["tsserver"].setup({})
+lspconfig["yamlls"].setup({})
+lspconfig["gopls"].setup({})
+lspconfig["sqlls"].setup({})
+lspconfig["rust_analyzer"].setup({})
+
+-- lsp_signature UI tweaks
+require("lsp_signature").setup({
+  bind = true,
+  handler_opts = {
+    border = "rounded",
+  },
+})
+
+-- LSP hover window UI tweaks
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+  vim.lsp.handlers.hover, {
+    border = "single"
+  }
+)
+
+-- LSP diagnostics
+vim.diagnostic.config {
+    float = { border = "single" },
+    underline = true,
+    virtual_text = false,
+    virtual_lines = false
+}
+
+-- Key bindings to be set after LSP attaches to buffer
+vim.api.nvim_create_autocmd("LspAttach", {
+  group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+  callback = function(ev)
+    vim.api.nvim_buf_set_option(ev.buf, "omnifunc", "v:lua.vim.lsp.omnifunc")
+    vim.api.nvim_buf_set_option(ev.buf, "formatexpr", "v:lua.vim.lsp.formatexpr()")
+
+    local opts = { buffer = ev.buf }
+    vim.keymap.set(mode.normal, "gD", vim.lsp.buf.declaration, opts)
+    vim.keymap.set(mode.normal, "gd", vim.lsp.buf.definition, opts)
+    vim.keymap.set(mode.normal, "K", vim.lsp.buf.hover, opts)
+    vim.keymap.set(mode.normal, "gi", vim.lsp.buf.implementation, opts)
+    --vim.keymap.set(mode.normal, "gr", vim.lsp.buf.references, opts) SEE telescope.lua
+    vim.keymap.set(mode.normal, "[d", vim.diagnostic.goto_prev, opts)
+    vim.keymap.set(mode.normal, "]d", vim.diagnostic.goto_next, opts)
+  end,
+})

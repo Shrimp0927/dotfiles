@@ -28,6 +28,15 @@ local plugins = {
     config = get_setup("treesitter"),
   },
   {
+    "neovim/nvim-lspconfig",
+    dependencies = {
+      { "williamboman/mason.nvim", build = ":MasonUpdate" },
+      { "williamboman/mason-lspconfig.nvim" },
+      { "ray-x/lsp_signature.nvim" },
+    },
+    config = get_setup("lsp"),
+  },
+  {
     "kyazdani42/nvim-tree.lua",
     dependencies = {
       "kyazdani42/nvim-web-devicons",

@@ -13,12 +13,6 @@ vim.keymap.set(mode.visual_select, '<leader>c', '"*yy<CR>', { noremap = true })
 vim.keymap.set(mode.visual_select, '<leader>v', '"+p<CR>', { noremap = true })
 vim.keymap.set(mode.normal, '<leader>v', '"+p<CR>', { noremap = true })
 
--- Misc
-vim.keymap.set(mode.normal, "=", ":lua update_buf_width(2)<CR>", { noremap = true })
-vim.keymap.set(mode.normal, "-", ":lua update_buf_width(-2)<CR>", { noremap = true })
-vim.keymap.set(mode.normal, "+", ":lua update_buf_height(2)<CR>", { noremap = true })
-vim.keymap.set(mode.normal, "_", ":lua update_buf_height(-2)<CR>", { noremap = true })
-
 -- Terminal buffer-scoped maps
 function _G.set_terminal_keymaps()
   local opts = { noremap = true }
