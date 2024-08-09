@@ -1,27 +1,13 @@
 local mode = require("consts").modes
 
 require("mason").setup()
+require("mason-lspconfig").setup()
 
-local lspconfig = require("lspconfig")
-
-lspconfig["bashls"].setup({})
-lspconfig["clangd"].setup({})
-lspconfig["cssls"].setup({})
-lspconfig["docker_compose_language_service"].setup({})
-lspconfig["dockerls"].setup({})
-lspconfig["eslint"].setup({})
-lspconfig["html"].setup({})
-lspconfig["lemminx"].setup({})
-lspconfig["lua_ls"].setup({})
-lspconfig["marksman"].setup({})
-lspconfig["pyright"].setup({})
-lspconfig["solargraph"].setup({})
-lspconfig["tailwindcss"].setup({})
-lspconfig["tsserver"].setup({})
-lspconfig["yamlls"].setup({})
-lspconfig["gopls"].setup({})
-lspconfig["sqlls"].setup({})
-lspconfig["rust_analyzer"].setup({})
+require("mason-lspconfig").setup_handlers {
+  function (server_name)
+    require("lspconfig")[server_name].setup {}
+  end,
+}
 
 -- lsp_signature UI tweaks
 require("lsp_signature").setup({
