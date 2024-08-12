@@ -1,13 +1,16 @@
 local mode = require("consts").modes
 
 require("mason").setup()
-require("mason-lspconfig").setup()
+local masonlsp =  require("mason-lspconfig")
+local lspconfig = require("lspconfig")
 
-require("mason-lspconfig").setup_handlers {
+masonlsp.setup()
+
+masonlsp.setup_handlers({
   function (server_name)
-    require("lspconfig")[server_name].setup {}
+    lspconfig[server_name].setup({})
   end,
-}
+})
 
 -- lsp_signature UI tweaks
 require("lsp_signature").setup({
@@ -44,7 +47,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set(mode.normal, "gd", vim.lsp.buf.definition, opts)
     vim.keymap.set(mode.normal, "K", vim.lsp.buf.hover, opts)
     vim.keymap.set(mode.normal, "gi", vim.lsp.buf.implementation, opts)
-    --vim.keymap.set(mode.normal, "gr", vim.lsp.buf.references, opts) SEE telescope.lua
     vim.keymap.set(mode.normal, "[d", vim.diagnostic.goto_prev, opts)
     vim.keymap.set(mode.normal, "]d", vim.diagnostic.goto_next, opts)
   end,

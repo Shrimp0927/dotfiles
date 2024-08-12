@@ -23,4 +23,5 @@ require('lualine').setup {
     theme = 'tokyonight'
   }
 }
-vim.cmd("colorscheme tokyonight")
+
+vim.cmd[[colorscheme tokyonight]]

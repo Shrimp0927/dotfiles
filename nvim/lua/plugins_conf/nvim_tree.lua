@@ -1,5 +1,4 @@
 local api = require("nvim-tree.api")
-local bufferline_api = ("bufferline.api")
 local Mode = require("consts").modes
 
 local function on_attach(bufnr)

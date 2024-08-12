@@ -9,7 +9,7 @@ vim.keymap.set(mode.normal, "<C-l>", "<C-w><C-l>", { noremap = true })
 vim.keymap.set(mode.normal, "<C-h>", "<C-w><C-h>", { noremap = true })
 
 -- copy/paste
-vim.keymap.set(mode.visual_select, '<leader>c', '"*yy<CR>', { noremap = true })
+vim.keymap.set(mode.visual_select, '<leader>c', '"+yy<CR>', { noremap = true })
 vim.keymap.set(mode.visual_select, '<leader>v', '"+p<CR>', { noremap = true })
 vim.keymap.set(mode.normal, '<leader>v', '"+p<CR>', { noremap = true })
 
