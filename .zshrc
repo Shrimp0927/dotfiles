@@ -21,4 +21,6 @@ alias h="cd $HOME"
 alias b="cd .."
 alias erd="erd --level 1 --hidden --no-ignore --long --group"
 alias c="clear"
-alias open="nautilus"
+
+# Startup
+#exec fortune | cowsay

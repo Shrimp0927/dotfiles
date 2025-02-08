@@ -1,27 +1,22 @@
-require("tokyonight").setup {
-  style = "storm",
-  light_style = "day",
-  transparent = true,
-  terminal_colors = true,
-  styles = {
-    sidebars = "dark",
-    floats = "dark",
-  },
-  day_brightness = 0.3,
-  dim_inactive = false,
-  lualine_bold = false,
-
-  on_colors = function(colors) end,
+require('material').setup {
   plugins = {
-    all = package.loaded.lazy == nil,
-    auto = true,
+    "nvim-cmp",
+    "telescope",
+    "gitsigns",
+    "nvim-tree",
+    "nvim-web-devicons",
   },
+  disable = {
+    background = true,
+  },
+  lualine_style = "stealth",
 }
 
 require('lualine').setup {
   options = {
-    theme = 'tokyonight'
+    theme = 'auto'
   }
 }
 
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme material]]
+vim.g.material_style = "lighter"
