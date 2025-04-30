@@ -25,9 +25,7 @@ require("nvim-tree").setup({
   },
   sort_by = "name",
   filters = {
-    custom = {
-      ".git"
-    }
+    dotfiles = false,
   },
   renderer = {
     highlight_opened_files = "name",
@@ -38,6 +36,11 @@ require("nvim-tree").setup({
     adaptive_size = false,
     centralize_selection = true,
     width = 30,
+  },
+  git = {
+    enable = true,
+    ignore = false,
+    timeout = 500,
   },
 })
 
