@@ -27,3 +27,16 @@ function _G.set_terminal_keymaps()
 end
 
 vim.cmd [[ autocmd TermOpen term://* lua set_terminal_keymaps() ]]
+
+vim.g.copilot_no_tab_map = true
+
+vim.api.nvim_create_autocmd("InsertEnter", {
+  pattern = "*",
+  callback = function()
+    vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("\\<CR>")', {
+      expr = true,
+      silent = true,
+      script = true
+    })
+  end
+})

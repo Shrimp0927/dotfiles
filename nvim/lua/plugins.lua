@@ -131,6 +131,9 @@ local plugins = {
       },
     },
   },
+  {
+    "github/copilot.vim",
+  },
 }
 
 local opts = {}
